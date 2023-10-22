@@ -1,19 +1,21 @@
+const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
-const express = require('express');
 const app = express();
 const chrome = require("chrome-aws-lambda");
 const path = require("path")
-const NodeCache = require('node-cache');
+//const NodeCache = require('node-cache');
 // const compression = require('compression');
 // app.use(compression()); 
 // app.use(express.json());
-app.use(cors())
-const cache = new NodeCache(); 
+app.use(cors());
+// const cache = new NodeCache(); 
 
-app.get('/', async (req, res) => { res.send({
+app.get('/', async (req, res) => { 
+  res.send({
   body: "Hello!",
-});  })
+  });  
+})
 
 //Anextour api routes
 // app.get('/hotels', async (req, res) => { 
